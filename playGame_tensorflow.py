@@ -2,13 +2,13 @@
 import numpy as np
 np.random.seed(1337)
 
-from gym_torcs import TorcsEnv
+from src.utils.gym_torcs import TorcsEnv
 import random
 import argparse
 import tensorflow as tf
-from my_config import *
+from src.utils.my_config import *
 
-from ddpg import *
+from src.ddpg import *
 import gc
 gc.enable()
 
@@ -21,6 +21,7 @@ print( max_eps )
 print( max_steps_eps )
 print( epsilon_start )
 
+
 def playGame(train_indicator=is_training):    #1 means Train, 0 means simply Run
 
     action_dim = 3  #Steering/Acceleration/Brake
@@ -30,7 +31,7 @@ def playGame(train_indicator=is_training):    #1 means Train, 0 means simply Run
 
     # Generate a Torcs environment
     vision = False
-    env = TorcsEnv(vision=vision, throttle=True,gear_change=False)
+    env = TorcsEnv(vision=vision, throttle=True, gear_change=False)
     
     EXPLORE = total_explore
     episode_count = max_eps
