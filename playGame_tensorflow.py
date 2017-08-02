@@ -15,12 +15,13 @@ gc.enable()
 import timeit
 import math
 
+'''
 print( is_training )
 print( total_explore )
 print( max_eps )
 print( max_steps_eps )
 print( epsilon_start )
-
+'''
 
 def playGame(train_indicator=is_training):    #1 means Train, 0 means simply Run
 

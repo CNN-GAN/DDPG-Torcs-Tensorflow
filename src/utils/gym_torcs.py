@@ -32,7 +32,7 @@ class TorcsEnv:
         else:
             os.system('torcs -nofuel -nolaptime &')
         time.sleep(0.5)
-        os.system('sh autostart.sh')
+        os.system('sh scripts/autostart.sh')
         time.sleep(0.5)
 
         """
